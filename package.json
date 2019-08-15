@@ -5,17 +5,17 @@
 	"publisher": "vscode-samples",
 	"repository": "https://github.com/Microsoft/vscode-extension-samples/helloworld-minimal-sample",
 	"engines": {
-		"vscode": "^1.32.0"
+		"vscode": "^1.31.0"
 	},
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.jaws.has-flows-from"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.jaws.has-flows-from",
+				"title": "A11Y Bug: JAWS reads \"has flows from\""
 			}
 		]
 	},

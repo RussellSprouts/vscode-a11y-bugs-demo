@@ -1,21 +1,11 @@
-# Hello World Minimal Sample
+# Minimal samples for VSCode extension accessibility bugs
 
-This is a minimal version of the [Hello World Sample](../helloworld-sample).
+1. JAWS reads "has flows from" after each element in Webview.
 
-It does not use TypeScript and only includes the `vscode` devDependency needed for extension development.
-
-## VS Code API
-
-### `vscode` module
-
-- [`commands.registerCommand`](https://code.visualstudio.com/api/references/vscode-api#commands.registerCommand)
-- [`window.showInformationMessage`](https://code.visualstudio.com/api/references/vscode-api#window.showInformationMessage)
-
-### Contribution Points
-
-- [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)
-
-## Running the Sample
-
-- Run `npm install` in terminal to install dependencies
-- Run the `Run Extension` target in the Debug View.
+    Steps to reproduce:
+    - Clone this repo
+    - `npm install`
+    - Launch the extension development host (`F5`)
+    - Run the `A11Y Bug: JAWS reads "has flows from"` command (`Ctrl-Shift-P`, then search for `A11Y`)
+    - Navigate focus inside of the webview that opens. Tabbing to the button works
+    - JAWS will unnecessarily read "has flows from" after each element.
